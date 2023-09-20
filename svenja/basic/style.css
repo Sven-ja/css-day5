@@ -45,7 +45,6 @@ main .link {
   font-size: 1rem;
   padding: 0.5rem 0.5rem;
   overflow: hidden;
-  display: inline-block;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,17 +64,17 @@ main .link :hover {
 }
 
 @media screen and (max-width: 600px) {
-  .container {
+  .raster {
     grid-template-columns: 1fr;
   }
 }
-@media screen and (min-width: 600px) and (max-width: 1200px) {
-  .container {
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+  .raster {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (min-width: 1200px) and (max-width: 1600px) {
-  .container {
-    grid-template-columns: repeat(3, 1fr);
+@media screen and (min-width: 1201px) and (max-width: 1600px) {
+  .raster {
+    grid-template-columns: repeat(4, 1fr);
   }
 }/*# sourceMappingURL=style.css.map */
