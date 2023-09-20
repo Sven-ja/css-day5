@@ -12,44 +12,34 @@ body {
 }
 
 main {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 main .raster {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  margin: 1.5rem;
+  gap: 2rem;
+  margin: 4rem;
 }
-main .raster .violet {
-  background-color: #ffd6ff;
-}
-main .raster .lavender {
-  background-color: #e7c6ff;
-}
-main .raster .purple {
-  background-color: #c8b6ff;
-}
-main .raster .blue {
-  background-color: #b8c0ff;
-}
-main .link {
-  position: relative;
-  color: rgb(30, 30, 30);
-  text-decoration: none;
+main .raster .button {
   aspect-ratio: 1/1;
-  border-radius: 15px;
+  border-radius: 25px;
   box-shadow: 1px 1px 6px rgba(30, 30, 30, 0.5), -1px -1px 6px rgba(30, 30, 30, 0.5);
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding: 0.5rem 0.5rem;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
-main .link .overlay {
+main .raster .button .link {
+  color: rgb(30, 30, 30);
+  text-decoration: none;
+}
+main .raster .button .overlay {
   position: absolute;
   background-color: rgba(30, 30, 30, 0.5);
   transition: all 0.5s ease-in-out;
@@ -59,22 +49,48 @@ main .link .overlay {
   bottom: 0;
   opacity: 0;
 }
-main .link :hover {
+main .raster .button :hover {
   opacity: 1;
 }
+main .violet {
+  background-color: #ffd6ff;
+}
+main .lavender {
+  background-color: #e7c6ff;
+}
+main .purple {
+  background-color: #c8b6ff;
+}
+main .blue {
+  background-color: #b8c0ff;
+}
 
-@media screen and (max-width: 600px) {
-  .raster {
+@media screen and (max-width: 200px) {
+  main .raster {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 1.5rem;
+  }
+  main .raster .button {
+    border-radius: 0px;
+    font-size: 1rem;
+    padding: 0.3rem 0.3rem;
+  }
+}
+@media screen and (min-width: 201px) and (max-width: 600px) {
+  main .raster {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 1.5rem;
+  }
+  main .raster .button {
+    border-radius: 15px;
+    font-size: 2rem;
+    padding: 0.3rem 0.3rem;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 1200px) {
-  .raster {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (min-width: 1201px) and (max-width: 1600px) {
-  .raster {
+  main .raster {
     grid-template-columns: repeat(4, 1fr);
   }
 }/*# sourceMappingURL=style.css.map */

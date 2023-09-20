@@ -13,75 +13,101 @@ body {
 }
 
 main {
-    height: 100vh;
     @include flex-center;
 
     .raster {
+        width: 100%;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
-        margin: 1.5rem;
+        gap: 2rem;
+        margin: 4rem;
 
-        .violet {
-            background-color: $violet;
-        }
+        .button {
+            aspect-ratio: 1/1;
+            border-radius: 25px;
+            box-shadow: 1px 1px 6px rgba(30, 30, 30, 0.5), -1px -1px 6px rgba(30, 30, 30, 0.5);
+            font-size: 1.5rem;
+            padding: 0.5rem 0.5rem;
+            overflow: hidden;
+            @include flex-center();
+            position: relative;
 
-        .lavender {
-            background-color: $lavender;
-        }
+            .link {
+                color: $font-color;
+                text-decoration: none;
+            }
 
-        .purple {
-            background-color: $purple;
-        }
+            .overlay {
+                position: absolute;
+                background-color: $overlay-color;
+                transition: all .5s ease-in-out;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                bottom: 0;
+                opacity: 0;
+            }
 
-        .blue {
-            background-color: $blue;
+            :hover {
+                opacity: 1;
+            }
         }
     }
 
-    .link {
-        position: relative;
-        color: $font-color;
-        text-decoration: none;
-        aspect-ratio: 1/1;
-        border-radius: 15px;
-        box-shadow: 1px 1px 6px rgba(30, 30, 30, 0.5), -1px -1px 6px rgba(30, 30, 30, 0.5);
-        font-size: 1rem;
-        padding: 0.5rem 0.5rem;
-        overflow: hidden;
-        @include flex-center();
+    .violet {
+        background-color: $violet;
+    }
 
-        .overlay {
-            position: absolute;
-            background-color: $overlay-color;
-            transition: all .5s ease-in-out;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            bottom: 0;
-            opacity: 0;
-        }
+    .lavender {
+        background-color: $lavender;
+    }
 
-        :hover {
-            opacity: 1;
+    .purple {
+        background-color: $purple;
+    }
+
+    .blue {
+        background-color: $blue;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    main {
+        .raster {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin: 1.5rem;
+
+            .button {
+                border-radius: 0px;
+                font-size: 1rem;
+                padding: 0.3rem 0.3rem;
+            }
         }
     }
 }
 
-@media screen and (max-width: 600px) {
-    .raster {
-        grid-template-columns: 1fr;
+@media screen and (min-width: 201px) and (max-width: 600px) {
+    main {
+        .raster {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 1.5rem;
+
+            .button {
+                border-radius: 15px;
+                font-size: 2rem;
+                padding: 0.3rem 0.3rem;
+            }
+        }
     }
+
 }
 
 @media screen and (min-width: 601px) and (max-width: 1200px) {
-    .raster {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (min-width: 1201px) and (max-width: 1600px) {
-    .raster {
-        grid-template-columns: repeat(4, 1fr);
+    main {
+        .raster {
+            grid-template-columns: repeat(4, 1fr);
+        }
     }
 }
