@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #bbd0ff;
+  font-family: Calibri;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .raster {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 1.5rem;
+}
+main .raster .violet {
+  background-color: #ffd6ff;
+}
+main .raster .lavender {
+  background-color: #e7c6ff;
+}
+main .raster .purple {
+  background-color: #c8b6ff;
+}
+main .raster .blue {
+  background-color: #b8c0ff;
+}
+main .link {
+  position: relative;
+  color: rgb(30, 30, 30);
+  text-decoration: none;
+  aspect-ratio: 1/1;
+  border-radius: 15px;
+  box-shadow: 1px 1px 6px rgba(30, 30, 30, 0.5), -1px -1px 6px rgba(30, 30, 30, 0.5);
+  font-size: 1rem;
+  padding: 0.5rem 0.5rem;
+  overflow: hidden;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .link .overlay {
+  position: absolute;
+  background-color: rgba(30, 30, 30, 0.5);
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+}
+main .link :hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}/*# sourceMappingURL=style.css.map */
