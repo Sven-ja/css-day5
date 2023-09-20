@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Cambria;
+}
+
+.navbar {
+  background-color: rgba(30, 30, 30, 0.5);
+  font-weight: 500;
+}
+.navbar img {
+  height: 50px;
+  aspect-ratio: 1/1;
+}
+.navbar ul {
+  display: flex;
+  justify-content: end;
+  list-style: none;
+  gap: 2rem;
+}
+.navbar a {
+  text-decoration: none;
+  color: rgb(30, 30, 30);
+  text-transform: uppercase;
+  padding: 2rem 3rem;
+  display: inline-block;
+}
+
+.hero {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+.hero img {
+  height: 200px;
+}
+.hero h1 {
+  margin-left: 2rem;
+  font-family: Cambria;
+}
+
+main {
+  background-color: #bbd0ff;
+}/*# sourceMappingURL=style.css.map */

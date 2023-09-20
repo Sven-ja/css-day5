@@ -1,0 +1,56 @@
+@use 'basic';
+@use 'variables' as *;
+
+@mixin flex-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: $main-font;
+}
+
+.navbar {
+    background-color: $navbar-color;
+    font-weight: 500;
+
+    img {
+        height: 50px;
+        aspect-ratio: 1/1;
+    }
+
+    ul {
+        display: flex;
+        justify-content: end;
+        list-style: none;
+        gap: 2rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: $font-color;
+        text-transform: uppercase;
+        padding: 2rem 3rem;
+        display: inline-block;
+    }
+}
+
+.hero {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+
+    img {
+        height: 200px;
+    }
+
+    h1 {
+        margin-left: 2rem;
+        font-family: $main-font ;
+    }
+}
+
+main {
+    background-color: $main-color;
+}

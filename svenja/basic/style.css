@@ -27,7 +27,7 @@ main .raster .button {
   aspect-ratio: 1/1;
   border-radius: 25px;
   box-shadow: 1px 1px 6px rgba(30, 30, 30, 0.5), -1px -1px 6px rgba(30, 30, 30, 0.5);
-  font-size: 1.5rem;
+  font-size: 3rem;
   padding: 0.5rem 0.5rem;
   overflow: hidden;
   display: flex;
