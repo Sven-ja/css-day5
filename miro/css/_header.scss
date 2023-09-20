@@ -1,0 +1,33 @@
+/* HEADER */
+
+@mixin flex-center() {
+    display: flex;
+    align-items: center;
+}
+
+header nav {
+    padding: 1rem 1rem;
+    @include flex-center;
+}
+
+.left {
+    padding-left: 2rem;
+    @include flex-center;
+}
+
+.left span {
+    font-size: 3rem;
+}
+
+.left p {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.right {
+    margin-left: auto;
+}
+
+.right a {
+    padding: 0 2rem;
+}
